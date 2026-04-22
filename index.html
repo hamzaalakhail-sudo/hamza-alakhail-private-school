@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Alakhail Private School</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #f4f4f4;
+            scroll-behavior: smooth;
         }
 
         header {
             background-color: #0a1f44;
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
         }
 
         nav {
             background-color: #1e3a8a;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
+            position: sticky;
+            top: 0;
         }
 
         nav a {
@@ -31,24 +35,43 @@
             font-weight: bold;
         }
 
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         .hero {
-            background-color: lightblue;
-            padding: 50px;
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
         }
 
         .section {
-            padding: 30px;
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 10px;
         }
 
         footer {
             background-color: #0a1f44;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -57,35 +80,39 @@
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Story</a>
-    <a href="#">Mission</a>
-    <a href="#">Campus</a>
-    <a href="#">Admission</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">
+<div id="home" class="hero">
     <h2>Welcome to Our School</h2>
     <p>Quality education in a safe and modern environment</p>
 </div>
 
-<div class="section">
+<div id="about" class="section">
     <h2>About Our School</h2>
     <p>
         Hamza Alakhail Private School is a modern school in Kabul.
-        We offer education from kindergarten to grade 12.
-        Our goal is to help students learn, grow, and succeed.
+        We provide education from kindergarten to grade 12 and focus on student success, discipline, and knowledge.
     </p>
 </div>
 
-<div class="section">
+<div id="programs" class="section">
     <h2>Our Programs</h2>
     <ul>
         <li>Kindergarten</li>
         <li>Primary School (Grade 1–5)</li>
-        <li>Middle & High School (Grade 6–12)</li>
+        <li>Middle School (Grade 6–9)</li>
+        <li>High School (Grade 10–12)</li>
     </ul>
+</div>
+
+<div id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: info@school.com</p>
+    <p>Location: Kabul, Afghanistan</p>
 </div>
 
 <footer>
