@@ -1,104 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamza Alakhail Private School</title>
+export default function DarulHijraWebsite() {
+  const programs = [
+    ["Tajweed", "Learn the rules of Tajweed and recite beautifully."],
+    ["Nazera", "Improve Qur’an recitation with fluency."],
+    ["Hefz", "Memorize the Qur’an with guidance."],
+    ["Tafseer", "Understand meanings and lessons."],
+    ["Qaidha", "Start with Arabic reading basics."],
+    ["Qur’an Tarjumah", "Learn translation and understanding."]
+  ];
 
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #f4f4f4;
-            scroll-behavior: smooth;
-        }
+  const leaders = [
+    ["Jan Alam Momand", "Founder & Creator", "Established Darul Hijra in 2020 with the mission of spreading Qur’an, Islamic knowledge, and strong moral character to children, sisters, and families worldwide."],
+    ["Fida Alakhail", "Administrator", "Oversees daily operations, student coordination, enrollment processes, and organizational management to ensure Darul Hijra runs smoothly."],
+    ["Sabir Alakhail", "Coordinator", "Manages class scheduling, communication, and program organization to support both students and teachers effectively."],
+    ["Bilal Alakhail", "IT & Technical Support", "Responsible for technology systems, online class support, website systems, and digital infrastructure."],
+    ["Hera Alakhail", "Principal (Rektor)", "Leads educational standards, academic quality, student development, and institutional excellence across all programs."]
+  ];
 
-        header {
-            background: #0a1f44;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#03140f] to-black text-white">
+      <header className="sticky top-0 z-50 bg-black/90 border-b border-yellow-700 px-6 py-4 flex justify-between items-center">
+        <div>
+          <h1 className="text-4xl font-serif text-yellow-400">DARUL HIJRA</h1>
+          <p className="text-green-400 text-sm tracking-widest">QUR’AN • SUNNAH • KNOWLEDGE</p>
+        </div>
+        <nav className="hidden md:flex gap-6 font-semibold">
+          <a href="#home">Home</a><a href="#about">About Us</a><a href="#programs">Programs</a><a href="#leaders">Our Scholars</a><a href="#contact">Contact</a>
+        </nav>
+        <button className="bg-green-700 border border-yellow-500 px-4 py-2 rounded-xl">Enroll Now</button>
+      </header>
 
-        nav {
-            background: #1e3a8a;
-            padding: 10px;
-            text-align: center;
-        }
+      <section id="home" className="px-8 py-24 text-center bg-[radial-gradient(circle_at_center,rgba(22,101,52,0.35),transparent_60%)]">
+        <p className="text-yellow-400 tracking-[0.3em] mb-3">KNOWLEDGE THAT LIGHTS THE PATH</p>
+        <h2 className="text-7xl font-serif text-white mb-3">DARUL HIJRA</h2>
+        <h3 className="text-3xl text-green-400 mb-6">QUR’AN • SUNNAH • KNOWLEDGE</h3>
+        <p className="max-w-4xl mx-auto text-lg text-gray-200 mb-8">An Online Islamic Institute dedicated to the Qur’an, Sunnah, and authentic Islamic knowledge based on the understanding of the Salaf.</p>
+        <div className="flex justify-center gap-4">
+          <button className="bg-green-700 px-6 py-3 rounded-xl border border-yellow-500">Our Programs</button>
+          <button className="border border-yellow-500 px-6 py-3 rounded-xl">Enroll Now</button>
+        </div>
+      </section>
 
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+      <section className="grid md:grid-cols-5 gap-4 px-8 py-8 text-center border-y border-green-900">
+        <div><p className="text-yellow-400">EST. 2020</p><p>Founded in 2020</p></div>
+        <div><p className="text-yellow-400">FOUNDER</p><p>Jan Alam Momand</p></div>
+        <div><p className="text-yellow-400">900+ STUDENTS</p><p>Between 900–1000 active students</p></div>
+        <div><p className="text-yellow-400">MULTILINGUAL</p><p>Arabic • Persian • Pashto</p></div>
+        <div><p className="text-yellow-400">FOR CHILDREN</p><p>& Sisters</p></div>
+      </section>
 
-        .hero {
-            background: linear-gradient(to right, #1e3a8a, #3b82f6);
-            color: white;
-            padding: 60px;
-            text-align: center;
-        }
+      <section id="about" className="grid md:grid-cols-2 gap-8 px-8 py-16 max-w-7xl mx-auto">
+        <div className="bg-white/95 text-black rounded-3xl p-8">
+          <h3 className="text-3xl font-serif mb-4">About Darul Hijra</h3>
+          <p>Established in 2020 by Jan Alam Momand, Darul Hijra is dedicated to teaching the Qur’an, Islamic knowledge and strong moral character to children, sisters and families.</p>
+        </div>
+        <div className="bg-white/95 text-black rounded-3xl p-8">
+          <h3 className="text-3xl font-serif mb-4">Our Mission</h3>
+          <ul className="space-y-2">
+            <li>• Spread authentic knowledge of Islam</li>
+            <li>• Teach Qur’an and Sunnah</li>
+            <li>• Build strong character and kindness</li>
+            <li>• Make quality Islamic education accessible</li>
+          </ul>
+        </div>
+      </section>
 
-        .section {
-            background: white;
-            margin: 20px auto;
-            padding: 30px;
-            max-width: 900px;
-            border-radius: 10px;
-        }
-
-        footer {
-            background: #0a1f44;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <h1>Hamza Alakhail Private School</h1>
-    <p>Kabul, Afghanistan</p>
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div id="home" class="hero">
-    <h2>Welcome</h2>
-    <p>Quality education in a safe environment</p>
-</div>
-
-<div id="about" class="section">
-    <h2>About</h2>
-    <p>We are a private school in Kabul offering education from K–12.</p>
-</div>
-
-<div id="programs" class="section">
-    <h2>Programs</h2>
-    <ul>
-        <li>Kindergarten</li>
-        <li>Primary</li>
-        <li>Middle School</li>
-        <li>High School</li>
-    </ul>
-</div>
-
-<div id="contact" class="section">
-    <h2>Contact</h2>
-    <p>info@school.com</p>
-</div>
-
-<footer>
-    © 2026 Hamza Alakhail Private School
-</footer>
-
-</body>
-</html>
+}
